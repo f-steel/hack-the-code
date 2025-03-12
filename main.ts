@@ -1,9 +1,9 @@
 import { GameEngine } from "./engine";
 import { parseFile } from "./parser";
-import { optimizedStrategy, basicStrategy } from "./strategy";
+import { optimizedStrategy } from "./strategy";
 import * as fs from "fs";
 
-const fileName = "input.txt";
+const fileName = "8-shiva.txt";
 
 (async () => {
   const { budget, turns, resources } = await parseFile(`input/${fileName}`);
