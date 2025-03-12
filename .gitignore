@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+dist/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# MacOS
+.DS_Store
+
+# Others
+.idea/
+.vscode/ 
