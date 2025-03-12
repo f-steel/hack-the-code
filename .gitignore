@@ -19,3 +19,7 @@ npm-debug.log*
 # Others
 .idea/
 .vscode/ 
+
+input/
+output/
+.venv/  

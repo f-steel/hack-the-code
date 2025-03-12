@@ -1,18 +1,21 @@
 import { GameEngine } from "./engine";
 import { parseFile } from "./parser";
-import { basicStrategy } from "./strategy";
+import { optimizedStrategy, basicStrategy } from "./strategy";
 import * as fs from "fs";
 
+const fileName = "input.txt";
+
 (async () => {
-  const { budget, turns, resources } = await parseFile("input.txt");
+  const { budget, turns, resources } = await parseFile(`input/${fileName}`);
+
   const engine = new GameEngine(budget, turns, resources);
 
   // Prepare output file
-  const outputFile = "0-demo.txt";
+  const outputFile = `output/${fileName}`;
   const outputLines: string[] = [];
 
   while (!engine.isGameOver()) {
-    const buyIds = basicStrategy(engine);
+    const buyIds = optimizedStrategy(engine);
     if (buyIds.length > 0) {
       const success = engine.purchaseResources(buyIds);
       if (success) {

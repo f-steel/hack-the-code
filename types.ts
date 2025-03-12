@@ -12,10 +12,11 @@ export interface ResourceDefinition {
   effectValue?: number; // Percentage for A, B, C, D; capacity for E
 }
 
+// Current definition (correct)
 export interface Turn {
-  minBuildings: number;
-  maxBuildings: number;
-  profitPerBuilding: number;
+  minBuildings: number; // TM_t
+  maxBuildings: number; // TX_t
+  profitPerBuilding: number; // TR_t
 }
 
 export interface ActiveResource {
